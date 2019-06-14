@@ -77,7 +77,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach(function(university) {
+graduates.forEach(university => {
   universities.push(`${university.university}`);
   universities.sort();
 });
@@ -90,14 +90,14 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach(function(nameAndEmail) {
+graduates.forEach(nameAndEmail => {
   contactInfo.push(`${nameAndEmail.first_name} ${nameAndEmail.email}`);
 })
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-graduates.forEach(function(uniName) {
+graduates.forEach(uniName => {
   if (uniName.university.includes("Uni")) {
     uni.push(`${uniName.university}`);
   }
@@ -127,8 +127,8 @@ The zoo wants to display both the scientific name and the animal name in front o
 The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 */
 const animalNames = [];
-zooAnimals.forEach(function(animal) {
-  animalNames.push(`Name: ${animal.animal_name}, Scientific ${animal.scientific_name}`);
+zooAnimals.forEach(animal => {
+  animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`);
 })
 console.log(animalNames);
 
@@ -138,7 +138,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 */
 const lowerCase = [];
-zooAnimals.map(function(lower) {
+zooAnimals.map(lower => {
   lowerCase.push(lower.animal_name.toLowerCase());
 })
 console.log(lowerCase); 
